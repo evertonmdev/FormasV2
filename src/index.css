@@ -1,0 +1,54 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    .PerspectiveCard {
+        transform-style: preserve-3d;
+        transform: 
+        perspective(5000px);
+        animation: scrollAnimation 0.4s;
+    }
+
+
+    .PerspectiveCard::before {
+        content: '';
+        position: absolute;
+        inset: -0.5rem;
+        background: rgba(0, 0, 0, 0.464);
+        transform: translateZ(-48px);
+        border-radius: 1.5rem;
+    }
+
+    .PerspectiveCard::after {
+        content: '';
+        position: absolute;
+        inset: -1rem;
+        background: linear-gradient(-45deg, red, blue);
+        transform: translateZ(-50px);
+        border-radius: 1.5rem;
+    }
+
+    .scrollContainer {
+        scroll-behavior: smooth;
+    }
+
+    @keyframes scrollAnimation {
+        from {
+          transform: translateX(0);
+        }
+        to {
+          transform: translateX(100%);
+        }
+    }
+
+}
+
+   
