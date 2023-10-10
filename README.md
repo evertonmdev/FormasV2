@@ -8,4 +8,4 @@ Currently, two official plugins are available:
 
 
 
-#Alguns bugs em navegadores como chrome e firefox para serem resolvidos!!!
+# Alguns bugs em navegadores como chrome e firefox para serem resolvidos!!!
